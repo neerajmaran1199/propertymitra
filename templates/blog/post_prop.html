@@ -1,0 +1,78 @@
+
+{% extends 'blog/index.html'%}
+
+
+
+{% block content %}
+    {% for post in posts %}
+        <!-- <article class="media content-section">
+          <img class="rounded-circle article-img" src="{{ post.image.url }}">
+          <div class="media-body">
+           
+            <h2><a class="article-title" href="{% url 'post-detail' post.id %}">{{ post.title }}</a></h2>
+            <p class="article-content">{{ post.content }}</p>
+            
+            <h2 class="article-title">{{ post.title }}</h2>
+            <p class="article-content">{{ object.content }}</p>
+            <p class="article-content">{{ post.location }}</p>
+            <p class="article-content">{{ post.area }}</p>
+            <p class="article-content">{{ post.status }}</p>
+            <p class="article-content">{{ post.description }}</p>
+            <p class="article-content">{{ post.rent }}</p>
+            <p class="article-content">{{ post.mobile_number }}</p>
+            <img class="rounded-circle article-img"  width='300px' height="300px" src="{{ object.photo.url }}">
+          </div>
+        </article> -->
+        
+          <!-- <div class="row">
+              <div class="col-sm-4">
+          <div class="container">
+              <div class="card" style="width: 18rem;">
+                 
+                  <img src="{{ post.image.url }}" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h2 class="article-title">{{ post.title }}</h2>
+                    <p class="article-content">{{ post.content }}</p>
+                    <p class="article-content">{{ post.location }}</p>
+                    <p class="article-content">{{ post.area }}</p>
+                    <p class="article-content">{{ post.status }}</p>
+                    <p class="article-content">{{ post.description }}</p>
+                    <p class="article-content">{{ post.rent }}</p>
+                    <p class="article-content">{{ post.mobile_number }}</p>
+                    <img class="rounded-circle article-img"  width='300px' height="300px" src="{{ object.photo.url }}">
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                  </div>
+                </div>
+                </div>
+              </div>
+          </div> -->
+       <div class="col-lg-12" style="width:1280">
+        <div class="card mb-3" style="max-width: 900px;height:300pxpx;">
+          <div class="row no-gutters">
+            <div class="col-md-4" style="padding:5px">
+              <img src="{{post.photo.url}}" class="card-img" alt="..." style="width:250px;height:150px">
+            </div>
+            <div class="col-md-8" style="padding-left:40px;padding-top:5px;padding-bottom:10px;">
+              <div class="card-body" style="padding-top:0px; padding-bottom:0px" >
+                <h5  class="article-title">{{ post.title }}</h5>
+                <p class="card-text" style="padding-top:0px">Location:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ post.location }}</p>
+                <p class="card-text" style="padding-top:0px">Area:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ post.area }}</p>
+                <p class="card-text" style="padding-top:0px">Rent: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ post.rent }}/month</p>
+                <p class="card-text" style="padding-top:0px">Description:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ post.description }}</p>
+                
+                
+                <button type="button" class="btn btn-primary">contact</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Optional JavaScript -->
+      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+      <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    {% endfor %}
+{% endblock content %}

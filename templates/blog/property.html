@@ -1,0 +1,42 @@
+{% extends 'blog/index.html'%}
+{% load static %}
+
+
+{% block content %}
+<div class="single-property-area wow fadeInUp" data-wow-delay="200ms">
+    <!-- Property Thumb -->
+    <div class="property-thumb">
+        <img src="{% static 'img/bg-img/1.jpg' %}" alt="">
+    </div>
+
+    <!-- Property Description -->
+    <div class="property-desc-area">
+        <!-- Property Title & Seller -->
+        <div class="property-title-seller d-flex justify-content-between">
+            <!-- Title -->
+            <div class="property-title">
+                <h6>1 BHK ROOMS for girls</h6>
+                <p><i class="fa fa-map-marker" aria-hidden="true"></i> 371/9b saket nagar</p>
+            </div>
+            <!-- Seller 
+            <div class="property-seller">
+                <p>Seller:</p>
+                <h6>Ankit Chourey</h6>
+            </div>-->
+        </div>
+        <!-- Property Info -->
+        <div class="property-info-area d-flex flex-wrap" style="width:100%">
+            <p style="width:100%">sqft: <span>1200m2</span></p>
+            <p>Rooms: <span>2</span></p>
+            <p>Baths: <span>05</span></p>
+            <p>Kitchen: <span>06</span></p>
+        </div>
+    </div>
+
+    <!-- Property Price -->
+    <div class="property-price">
+        <p class="badge-rent">Contect</p>
+        <p class="price">1,599/month</p>
+    </div>
+</div>
+{% endblock %}

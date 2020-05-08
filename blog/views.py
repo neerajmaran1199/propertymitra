@@ -2,6 +2,8 @@
   
 from django.shortcuts import render
 from .models import Post
+from django.utils.safestring import mark_safe
+
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.views.generic import (
     ListView,
@@ -41,7 +43,7 @@ class PostDetailView(DetailView):
 
 class PostCreateView(LoginRequiredMixin, CreateView):
     model = Post
-    fields = ['title', 'content', 'location', 'area', 'status', 'description', 'mobile_number', 'rent', 'house', 'tenant','photo']
+    fields = ['title', 'content', 'location', 'area', 'status', 'description', 'mobile_number', 'rent', 'house', 'tenant', 'photo']
 
     def form_valid(self, form):
         form.instance.author = self.request.user
